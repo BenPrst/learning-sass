@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap');
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$red: #E44F39;
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    @include center();
+    font-family: 'Alexandria', sans-serif;
+}
+
+.boxP{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 500px;
+}
+
+.boxTop{
+   height: 350px;
+   width: 500px; 
+   background-image: url(india.jfif);
+   background-position: center;
+   background-size: cover;
+   position: relative;
+}
+
+.boxBottom, .boxStats{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.photos-btn{
+    background-color: $red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.date{
+    background-color: $red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 50%;
+    right: 0;
+    margin: 10px;
+}
+
+h2{
+    color: $red;
+    padding-bottom: 20px;
+}
+
+.boxStats{
+    display: flex;
+    flex-direction: row;
+    .time{
+        padding: 5px;
+    }
+    .comments{
+        padding: 5px;
+    }
+}
+
+.text{
+    display: none;
+}
