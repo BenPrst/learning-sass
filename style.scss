@@ -12,6 +12,7 @@ $red: #E44F39;
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    transition: 1s;
 }
 
 body{
@@ -23,51 +24,60 @@ body{
 
 .boxP{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 500px;
+    width: 450px;
+    overflow: hidden;
 }
 
 .boxTop{
-   height: 350px;
-   width: 500px; 
-   background-image: url(india.jfif);
-   background-position: center;
-   background-size: cover;
-   position: relative;
+    overflow: hidden;
+    height: 350px;
+    width: 450px;
+    position: relative;
+        .img{
+        height: 350px;
+        width: 450px;
+        background-image: url(india.jfif);
+        background-position: center;
+        background-size: 806px 390px;
+        position: absolute;
+        } 
+        .date{
+            background-color: $red;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            position: absolute;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            right: 0;
+            margin: 10px;
+            z-index: 10;
+        }
+        .photos-btn{
+            background-color: $red;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+        }
 }
 
 .boxBottom, .boxStats{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     padding: 10px;
     margin: 10px;
     text-align: justify;
-}
-
-.photos-btn{
-    background-color: $red;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-}
-
-.date{
-    background-color: $red;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    position: absolute;
-    text-align: center;
-    line-height: 15px;
-    border-radius: 50%;
-    right: 0;
-    margin: 10px;
-}
-
-h2{
-    color: $red;
-    padding-bottom: 20px;
+    h1{
+        padding-top: 20px;
+    }
+    h2{
+        color: $red;
+        padding-bottom: 20px;
+    }
 }
 
 .boxStats{
@@ -82,5 +92,26 @@ h2{
 }
 
 .text{
-    display: none;
+    overflow: hidden;
+    height: 0px;
 }
+
+.boxP:hover{
+    .text{
+        height: 57px;
+    }
+    .img{
+        background-size: 967.2px 468px;
+        transition: 1s;
+        filter: grayscale(50%);
+    }
+}
+
+
+
+
+
+
+
+
+
